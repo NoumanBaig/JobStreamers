@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionName="layout"
+    android:id="@+id/layout_otp"
+    android:background="@color/colorAccent"
+    tools:context=".activities.VerifyOtpActivity">
+
+    <FrameLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content" />
+
+        <com.awt.jobstreamers.utils.CustomFontTextView
+            android:text="@string/verification"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </FrameLayout>
+
+    <ScrollView
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:id="@+id/linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:transitionName="logo"
+            android:layout_width="wrap_content"
+            android:layout_height="180dp"
+            android:src="@drawable/otp_img" />
+
+
+            <com.awt.jobstreamers.utils.CustomFontTextView
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:textSize="16sp"
+                android:id="@+id/txt_code"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.awt.jobstreamers.utils.CustomFontTextView
+                android:layout_width="wrap_content"
+                android:padding="10dp"
+                android:text="@string/enter_code"
+                android:textColor="@color/white"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+            <com.awt.jobstreamers.utils.CustomFontEditText
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:id="@+id/edt_otp1"
+                android:background="@drawable/edittext_otp_background"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <com.awt.jobstreamers.utils.CustomFontEditText
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/edt_otp2"
+                android:inputType="number"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edittext_otp_background"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <com.awt.jobstreamers.utils.CustomFontEditText
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/edt_otp3"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:background="@drawable/edittext_otp_background"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <com.awt.jobstreamers.utils.CustomFontEditText
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/edt_otp4"
+                android:layout_marginLeft="8dp"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edittext_otp_background"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <com.awt.jobstreamers.utils.CustomFontEditText
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/edt_otp5"
+                android:inputType="number"
+                android:imeOptions="actionNext"
+                android:maxLength="1"
+                android:singleLine="true"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/edittext_otp_background"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <com.awt.jobstreamers.utils.CustomFontEditText
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:id="@+id/edt_otp6"
+                android:inputType="number"
+                android:imeOptions="actionDone"
+                android:maxLength="1"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:singleLine="true"
+                android:background="@drawable/edittext_otp_background"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            app:backgroundTint="@color/white"
+            app:elevation="5dp"
+            app:useCompatPadding="true"
+            app:fabSize="normal"
+            android:src="@drawable/ic_arrow_forward_black"
+            android:id="@+id/fab_verify"
+            android:layout_height="wrap_content" />
+
+        <com.awt.jobstreamers.utils.CustomFontTextView
+            android:layout_width="wrap_content"
+            android:padding="10dp"
+            android:id="@+id/txt_resend"
+            android:textStyle="bold"
+            android:text="@string/resend_code"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content" />
+
+
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

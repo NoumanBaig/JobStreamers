@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".activities.HomeActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="5dp"
+        app:popupTheme="@style/AppTheme.PopupOverlay"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_profile_pic"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:src="@mipmap/icon_user_two"
+                app:civ_border_color="@color/colorAccent"
+                app:civ_border_width="2dp"
+                app:civ_circle_background_color="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp">
+
+                <com.awt.jobstreamers.utils.CustomFontTextView
+                    android:id="@+id/txt_userName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name"
+                    android:textColor="@color/white" />
+
+                <com.awt.jobstreamers.utils.CustomFontTextView
+                    android:id="@+id/txt_userId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_id"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <include layout="@layout/content_home" />
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--android:id="@+id/base_fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="70dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:tint="@android:color/white"-->
+    <!--app:fabSize="normal"-->
+    <!--android:visibility="gone"-->
+    <!--app:layout_constraintTop_toTopOf="@+id/activity_main"-->
+    <!--app:layout_constraintRight_toRightOf="@+id/activity_main"-->
+    <!--android:src="@drawable/ic_add"-->
+    <!--android:layout_marginEnd="10dp" />-->
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/activity_main"
+        app:layout_constraintTop_toTopOf="@id/activity_main">
+
+        <ImageView
+            android:id="@+id/img_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_offline" />
+
+        <com.awt.jobstreamers.utils.CustomFontTextView
+            android:id="@+id/txt_on_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:text="@string/offline"
+            android:textColor="@color/black" />
+
+
+    </LinearLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/flip_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/green"
+        android:src="@mipmap/icon_flip"
+        app:fabSize="normal"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        app:layout_constraintTop_toTopOf="@+id/activity_main" />
+
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--android:id="@+id/end_fab"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--app:fabSize="mini"-->
+    <!--android:layout_marginBottom="12dp"-->
+    <!--android:layout_marginStart="22dp"-->
+    <!--android:layout_marginLeft="22dp"-->
+    <!--android:visibility="invisible"-->
+    <!--android:backgroundTint="@color/red"-->
+    <!--app:layout_constraintBottom_toTopOf="@+id/mic_fab"-->
+    <!--app:layout_constraintLeft_toLeftOf="@+id/activity_main"-->
+    <!--android:src="@mipmap/icon_call_end" />-->
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/mic_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:backgroundTint="@color/black"
+        android:src="@mipmap/icon_mic"
+        app:fabSize="normal"
+        app:layout_constraintRight_toRightOf="@+id/activity_main"
+        app:layout_constraintTop_toBottomOf="@+id/flip_fab" />
+
+
+    <com.awt.jobstreamers.utils.CustomFontButton
+        android:id="@+id/btn_connectNow"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:background="@drawable/button_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/connect_now"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main"
+        app:layout_constraintLeft_toLeftOf="@id/activity_main"
+        app:layout_constraintRight_toRightOf="@id/activity_main"
+        app:layout_constraintTop_toTopOf="@id/activity_main" />
+
+    <com.awt.jobstreamers.utils.CustomFontButton
+        android:id="@+id/btn_block"
+        android:layout_width="140dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="110dp"
+        android:background="@drawable/red_button_background"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/block"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/btn_connectNow"
+        app:layout_constraintLeft_toLeftOf="@id/btn_connectNow"
+        app:layout_constraintRight_toRightOf="@id/btn_connectNow"
+        app:layout_constraintTop_toTopOf="@id/btn_connectNow" />
+
+    <ImageView
+        android:id="@+id/img_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chevron_right"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main"
+        app:layout_constraintRight_toRightOf="@id/activity_main"
+        app:layout_constraintTop_toTopOf="@id/activity_main" />
+
+    <ImageView
+        android:id="@+id/img_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_chevron_left"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="@id/activity_main"
+        app:layout_constraintLeft_toLeftOf="@id/activity_main"
+        app:layout_constraintTop_toTopOf="@id/activity_main" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
